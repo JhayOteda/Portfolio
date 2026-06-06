@@ -1,0 +1,142 @@
+.about {
+  background-color: var(--background);
+  position: relative;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Photo card wrapper */
+.photoWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.photoFrame {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.15) 0%, rgba(var(--secondary-rgb), 0.15) 100%);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.photoFrame::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, var(--primary), transparent, transparent);
+  animation: rotateBorder 8s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes rotateBorder {
+  to { transform: rotate(360deg); }
+}
+
+.photoPlaceholder {
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  background: var(--background);
+  border-radius: calc(var(--border-radius-lg) - 8px);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.photoIcon {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Info content */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.detailsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .detailsList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

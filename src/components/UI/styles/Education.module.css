@@ -1,0 +1,137 @@
+.education {
+  background-color: var(--background);
+  position: relative;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100%);
+  opacity: 0.25;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 80px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+/* Node Dot styling */
+.nodeDot {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.timelineItem:hover .nodeDot {
+  transform: scale(1.2);
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px rgba(var(--secondary-rgb), 0.5);
+}
+
+/* Content Layout */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.degree {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-full);
+  white-space: nowrap;
+}
+
+.school {
+  font-weight: 600;
+  color: var(--text-highlight);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.desc {
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .timelineItem {
+    padding-left: 60px;
+  }
+
+  .timeline::before {
+    left: 22px;
+  }
+
+  .nodeDot {
+    left: 10px;
+  }
+}
