@@ -8,22 +8,23 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Jhay | Developer Portfolio",
-  description: "Modern web based portfolio of Jhay, a software developer and creative engineer. Explore projects, education, and technical skills.",
-  keywords: ["Jhay", "Portfolio", "Software Developer", "Web Developer", "Next.js", "React", "Frontend Developer"],
-  authors: [{ name: "Jhay" }],
+  metadataBase: new URL("https://jhay-oteda.vercel.app"),
+  title: "Jhay Oteda | Web Developer Portfolio",
+  description: "Web developer portfolio of Jhay Oteda, currently studying at the University of Cebu - Main Campus. Explore my projects, skills, and education history.",
+  keywords: ["Jhay Oteda", "Portfolio", "Web Developer", "Next.js", "React", "Cebu Developer"],
+  authors: [{ name: "Jhay Oteda" }],
   openGraph: {
-    title: "Jhay | Developer Portfolio",
-    description: "Modern web based portfolio of Jhay, a software developer and creative engineer.",
-    url: "https://your-portfolio-domain.vercel.app", // Fallback Vercel URL
-    siteName: "Jhay Portfolio",
+    title: "Jhay Oteda | Web Developer Portfolio",
+    description: "Web developer portfolio of Jhay Oteda, currently studying at the University of Cebu - Main Campus.",
+    url: "https://jhay-oteda.vercel.app",
+    siteName: "Jhay Oteda Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jhay | Developer Portfolio",
-    description: "Modern web based portfolio of Jhay, a software developer and creative engineer.",
+    title: "Jhay Oteda | Web Developer Portfolio",
+    description: "Web developer portfolio of Jhay Oteda, currently studying at the University of Cebu - Main Campus.",
   },
 };
 
