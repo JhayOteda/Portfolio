@@ -20,11 +20,20 @@ export const metadata = {
     siteName: "Jhay Oteda Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/j-img.jpg",
+        width: 800,
+        height: 800,
+        alt: "Jhay Oteda Profile",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jhay Oteda | Web Developer Portfolio",
     description: "Web developer portfolio of Jhay Oteda, currently studying at the University of Cebu - Main Campus.",
+    images: ["/j-img.jpg"],
   },
 };
 
